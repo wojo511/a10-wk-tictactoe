@@ -1,0 +1,163 @@
+/* Main layout and background settings */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/clouds.jpg'); /* Ensure the path to your background image is correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000; /* Dark gray text for better contrast */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for headers */
+h1 {
+  color: #144cd5; /* Maintaining the blue color for headers */
+  text-align: center;
+}
+
+/* Container styles to align content */
+.container-fluid, .row {
+  min-width: 1200px;
+  height: 100%;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the game board */
+#gameBoard {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 80%;
+}
+
+/* Adjustments for game tiles */
+#gameBoard li {
+  height: calc((100vh - 400px) / 3);
+  background-color: #ffffff;
+  color: #555;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #bbbbbb;
+  transition: background-color 0.3s, transform 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc((100vh - 400px) / 6);
+  text-align: center;
+}
+
+/* Hover effects for interactive elements */
+#gameBoard li:hover {
+  background-color: #8abeea;
+  color: #333;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+/* Styling for game controls and buttons */
+.game-controls input, .game-controls button {
+  margin-top: 10px;
+  background-color: #e8e8e8;
+  border: 1px solid #cccccc;
+  color: #333;
+}
+
+/* Footer adjustments */
+footer {
+  margin-top: 30px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Clearing floats where necessary */
+.clearfix {
+  clear: both;
+}
+
+/* Styling specific player tokens */
+.o {
+  color: #595b59 !important;
+}
+
+.x {
+  color: #595b59 !important;
+}
+
+/* Button reset styles */
+#reset {
+  border: 0;
+  background: #444;
+  color: #fff;
+  width: 70%;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.loginFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure it spans the full width */
+  height: 100%; /* Ensure it spans the full height */
+}
+
+.loginForm {
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8); /* Optional: make background slightly transparent */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+
+.loginForm h1, .loginForm h4 {
+  text-align: center;
+  color: #333;
+}
+
+.inputText {
+  width: 100%; /* Full-width inputs */
+  padding: 10px 15px;
+  margin-top: 8px;
+  margin-bottom: 20px; /* Spacing between inputs */
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.submitButton, .toggleButton {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #007BFF; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px; /* Spacing above button */
+  font-size: 16px;
+}
+
+.submitButton:hover, .toggleButton:hover {
+  background-color: #0056b3; /* Darker on hover */
+}
+
+.toggleButton {
+  background-color: #6c757d; /* Secondary button color */
+  margin-top: 15px; /* Spacing between buttons */
+}
+
+.toggleButton:hover {
+  background-color: #545b62; /* Darker on hover for secondary button */
+}
+
